@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Add Task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-input type="text" placeholder="Your task" [(ngModel)]="task">
+    </ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-input type="text" placeholder="Priority" [(ngModel)]="urgency">
+    </ion-input>
+  </ion-item>
+
+  <button ion-button (click)="addTaskToFirebase()" color="secondary" full>
+    Add Task
+  </button>
+  <button ion-button icon-only (click)="close()" color="danger" full>
+    <ion-icon name="close"></ion-icon>
+  </button>
+
+
+</ion-content>
